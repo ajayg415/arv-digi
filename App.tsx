@@ -9,20 +9,28 @@
  */
 
 import React from 'react';
-import {StatusBar} from 'react-native';
+import {StatusBar, View, StyleSheet} from 'react-native';
 import {enableScreens} from 'react-native-screens';
 
+import Colors from './constants/Colors';
 import Navigator from './src/navigation/routes';
 
 enableScreens();
 
 const App = () => {
   return (
-    <>
+    <View style={styles.screen}>
       <StatusBar />
       <Navigator />
-    </>
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: Colors.background,
+  },
+});
 
 export default App;

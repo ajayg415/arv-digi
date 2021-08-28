@@ -1,10 +1,13 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
+import {TextView} from '../components';
+import Colors from '../../constants/Colors';
+
 const Faq = () => {
   return (
     <View style={styles.screen}>
-      <Text>Faq Screen</Text>
+      <TextView>Faq Screen</TextView>
     </View>
   );
 };
@@ -14,6 +17,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: Colors.background,
   },
 });
 
