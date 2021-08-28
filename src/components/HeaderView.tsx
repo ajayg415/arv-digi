@@ -22,8 +22,8 @@ const HeaderView = ({title}: {title: string}) => {
 
 const styles = StyleSheet.create({
   screen: {
-    position: 'absolute',
-    top: 0,
+    // position: 'absolute',
+    // top: 0,
   },
   iconsWrapper: {
     flexDirection: 'row',
@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     alignContent: 'space-around',
   },
   header: {
+    textAlign: 'center',
     color: Colors.white,
   },
 });
