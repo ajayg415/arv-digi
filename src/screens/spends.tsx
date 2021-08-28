@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Button, View, StyleSheet, ScrollView} from 'react-native';
 import axios from 'axios';
 
-import {TextView, HeaderView, SliderView} from '../components';
+import {TextView, HeaderView, SliderView, PieChartView} from '../components';
 import Colors from '../../constants/Colors';
 import {Categories} from '../types';
 
@@ -24,6 +24,7 @@ const Spends = () => {
     <View style={styles.screen}>
       <ScrollView>
         <HeaderView title="ARV Case Study" />
+
         <View style={styles.sliders}>
           {categories.map((cat: Categories) => {
             return (
@@ -37,12 +38,27 @@ const Spends = () => {
             );
           })}
         </View>
+
         <View style={styles.submit}>
           <Button
             title="Submit"
             color={Colors.primary}
             onPress={() => console.log('pressed')}
           />
+        </View>
+
+        <View style={styles.charts}>
+          {categories.map((cat: Categories) => {
+            return (
+              <PieChartView
+                value={cat.value}
+                min={cat.min}
+                max={cat.max}
+                title={cat.name}
+                key={cat.id}
+              />
+            );
+          })}
         </View>
       </ScrollView>
     </View>
@@ -62,6 +78,9 @@ const styles = StyleSheet.create({
   submit: {
     marginTop: 20,
     marginHorizontal: 20,
+  },
+  charts: {
+    justifyContent: 'space-between',
   },
 });
 
