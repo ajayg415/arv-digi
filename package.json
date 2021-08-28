@@ -1,9 +1,10 @@
 {
-  "name": "rnarv",
+  "name": "ARV",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "androidw": "touch .env && node scripts/android-build.js --env android/.env --type debug",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
