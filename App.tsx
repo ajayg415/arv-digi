@@ -12,7 +12,7 @@ import React from 'react';
 import {StatusBar} from 'react-native';
 import {enableScreens} from 'react-native-screens';
 
-import TabNavigation from './src/navigation/routes';
+import Navigator from './src/navigation/routes';
 
 enableScreens();
 
@@ -20,7 +20,7 @@ const App = () => {
   return (
     <>
       <StatusBar />
-      <TabNavigation />
+      <Navigator />
     </>
   );
 };
