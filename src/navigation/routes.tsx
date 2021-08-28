@@ -7,12 +7,34 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import Spends from '../screens/spends';
 import ContactUs from '../screens/contact-us';
 import Faq from '../screens/faq';
+import {IconView} from '../components';
+import Colors from '../../constants/Colors';
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigation = () => {
   return (
-    <Tab.Navigator screenOptions={{headerShown: false}}>
+    <Tab.Navigator
+      screenOptions={({route}: {route: any}) => ({
+        tabBarIcon: ({focused}: {focused: boolean}) => {
+          let iconName;
+          let iconSize;
+
+          if (route.name === 'Spends') {
+            iconName = 'money';
+            iconSize = focused ? 30 : 24;
+          } else {
+            iconName = 'rocket';
+            iconSize = focused ? 30 : 24;
+          }
+
+          return <IconView name={iconName} size={iconSize} />;
+        },
+        headerShown: false,
+        tabBarShowLabel: false,
+        tabBarActiveBackgroundColor: Colors.primary,
+        tabBarInactiveBackgroundColor: Colors.primary,
+      })}>
       <Tab.Screen name="Spends" component={Spends} />
       <Tab.Screen name="ContactUs" component={ContactUs} />
     </Tab.Navigator>
