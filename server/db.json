@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Travel",
+      "min": 0,
+      "max": 100,
+      "value": 890
+    },
+    {
+      "id": 2,
+      "name": "Movies",
+      "min": 0,
+      "max": 100,
+      "value": 600
+    },
+    {
+      "id": 3,
+      "name": "Food",
+      "min": 0,
+      "max": 100,
+      "value": 700
+    },
+    {
+      "id": 4,
+      "name": "Hotel",
+      "min": 0,
+      "max": 100,
+      "value": 500
+    }
+  ]
+}
