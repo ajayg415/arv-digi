@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {Icon} from 'react-native-elements';
 import Colors from '../../constants/Colors';
 
 interface IconViewProps {
@@ -8,7 +8,15 @@ interface IconViewProps {
 }
 
 const IconView = ({name, size}: IconViewProps) => {
-  return <Icon icon={name} size={size} color={Colors.white} />;
+  return (
+    <Icon
+      name={name}
+      size={size}
+      color={Colors.white}
+      type="font-awesome"
+      solid
+    />
+  );
 };
 
 export default IconView;

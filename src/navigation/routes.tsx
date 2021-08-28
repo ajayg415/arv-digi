@@ -24,7 +24,7 @@ const TabNavigation = () => {
             iconName = 'money';
             iconSize = focused ? 30 : 24;
           } else {
-            iconName = 'rocket';
+            iconName = 'glass';
             iconSize = focused ? 30 : 24;
           }
 
