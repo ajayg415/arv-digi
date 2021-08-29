@@ -1,15 +1,20 @@
 import React, {ReactNode} from 'react';
-import {Text, StyleSheet} from 'react-native';
+import {Text, StyleSheet, StyleProp, TextStyle} from 'react-native';
 
 import Colors from '../../constants/Colors';
 
 interface TextViewProps {
   children: ReactNode;
-  customStyles?: any;
+  customStyles?: StyleProp<TextStyle>;
+  onPress?: () => Promise<boolean | void>;
 }
 
-const TextView = ({children, customStyles}: TextViewProps) => {
-  return <Text style={[styles.text, customStyles]}>{children}</Text>;
+const TextView = ({children, customStyles, onPress}: TextViewProps) => {
+  return (
+    <Text style={[styles.text, customStyles]} onPress={() => onPress?.()}>
+      {children}
+    </Text>
+  );
 };
 
 const styles = StyleSheet.create({

@@ -1,11 +1,10 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {View, StyleSheet} from 'react-native';
-import {Text} from 'react-native-elements';
 
 import Colors from '../../constants/Colors';
 import {IconView} from '.';
 
-const HeaderView = ({title}: {title: string}) => {
+const HeaderView = ({children}: {children?: ReactNode}) => {
   return (
     <View style={styles.screen}>
       <View style={styles.iconsWrapper}>
@@ -13,9 +12,7 @@ const HeaderView = ({title}: {title: string}) => {
         <IconView name={'search'} size={30} />
         <IconView name={'bell'} size={30} />
       </View>
-      <Text h2 style={styles.header}>
-        {title}
-      </Text>
+      {children}
     </View>
   );
 };
@@ -29,10 +26,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginVertical: 10,
     alignContent: 'space-around',
-  },
-  header: {
-    textAlign: 'center',
-    color: Colors.white,
   },
 });
 

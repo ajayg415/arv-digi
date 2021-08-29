@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Button, View, StyleSheet, ScrollView} from 'react-native';
 import axios from 'axios';
+import {Text} from 'react-native-elements';
 
 import {TextView, HeaderView, SliderView, PieChartView} from '../components';
 import Colors from '../../constants/Colors';
@@ -23,7 +24,11 @@ const Spends = () => {
   return (
     <View style={styles.screen}>
       <ScrollView>
-        <HeaderView title="ARV Case Study" />
+        <HeaderView>
+          <Text h2 style={styles.header}>
+            ARV Case Study
+          </Text>
+        </HeaderView>
 
         <View style={styles.sliders}>
           {categories.map((cat: Categories) => {
@@ -81,6 +86,10 @@ const styles = StyleSheet.create({
   },
   charts: {
     justifyContent: 'space-between',
+  },
+  header: {
+    textAlign: 'center',
+    color: Colors.white,
   },
 });
 
