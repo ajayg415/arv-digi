@@ -5,16 +5,19 @@ import Colors from '../../constants/Colors';
 interface IconViewProps {
   name: any;
   size: number;
+  color?: string;
+  onPress?: () => void;
 }
 
-const IconView = ({name, size}: IconViewProps) => {
+const IconView = ({name, size, color, ...restPorps}: IconViewProps) => {
   return (
     <Icon
       name={name}
       size={size}
-      color={Colors.white}
+      color={color || Colors.white}
       type="font-awesome"
       solid
+      {...restPorps}
     />
   );
 };

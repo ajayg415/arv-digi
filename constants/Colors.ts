@@ -6,4 +6,5 @@ export default {
   textBox: '#2A2A2A',
   textBoxPlaceHolder: '#797979',
   faqFont: '#7D7D7D',
+  black: '#000000',
 };

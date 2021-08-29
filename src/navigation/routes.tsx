@@ -9,6 +9,7 @@ import ContactUs from '../screens/contact-us';
 import Faq from '../screens/faq';
 import {IconView} from '../components';
 import Colors from '../../constants/Colors';
+import {color} from 'react-native-elements/dist/helpers';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,10 +22,10 @@ const TabNavigation = () => {
           let iconSize;
 
           if (route.name === 'Spends') {
-            iconName = 'money';
+            iconName = 'home';
             iconSize = focused ? 30 : 24;
           } else {
-            iconName = 'glass';
+            iconName = 'list-alt';
             iconSize = focused ? 30 : 24;
           }
 
@@ -45,9 +46,31 @@ const Drawer = createDrawerNavigator();
 
 const StackNavigation = () => {
   return (
-    <Drawer.Navigator screenOptions={{headerShown: false}}>
-      <Drawer.Screen name="Home" component={TabNavigation} />
-      <Drawer.Screen name="Faq" component={Faq} />
+    <Drawer.Navigator
+      screenOptions={{
+        headerShown: false,
+        drawerContentStyle: {backgroundColor: Colors.black},
+        drawerContentContainerStyle: {backgroundColor: Colors.black},
+        drawerLabelStyle: {color: Colors.white},
+        drawerStyle: {width: '100%'},
+        drawerIcon: () => (
+          <IconView name="close" size={20} color={Colors.primary} />
+        ),
+      }}>
+      <Drawer.Screen
+        name="Home"
+        component={TabNavigation}
+        options={{
+          drawerIcon: () => <IconView name="home" size={20} />,
+        }}
+      />
+      <Drawer.Screen
+        name="Faq"
+        component={Faq}
+        options={{
+          drawerIcon: () => <IconView name="star" size={20} />,
+        }}
+      />
     </Drawer.Navigator>
   );
 };

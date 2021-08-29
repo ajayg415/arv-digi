@@ -5,10 +5,10 @@ import {Text} from 'react-native-elements';
 import {TextView, HeaderView, CollapsableView} from '../components';
 import Colors from '../../constants/Colors';
 
-const Faq = ({navigation: {goBack}}: {navigation: any}) => {
+const Faq = ({navigation: {goBack, openDrawer}}: {navigation: any}) => {
   return (
     <View style={styles.screen}>
-      <HeaderView>
+      <HeaderView openDrawer={openDrawer}>
         <View style={styles.header}>
           <Text h4 style={styles.title}>
             FAQ

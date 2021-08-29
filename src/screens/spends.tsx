@@ -9,7 +9,7 @@ import {Categories} from '../types';
 
 import data from '../../server/db.json';
 
-const Spends = () => {
+const Spends = ({navigation: {openDrawer}}) => {
   const [categories, setCategories] = useState<Categories[]>([]);
   useEffect(() => {
     (async () => {
@@ -24,7 +24,7 @@ const Spends = () => {
   return (
     <View style={styles.screen}>
       <ScrollView>
-        <HeaderView>
+        <HeaderView openDrawer={openDrawer}>
           <Text h2 style={styles.header}>
             ARV Case Study
           </Text>

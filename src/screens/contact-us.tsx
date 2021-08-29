@@ -5,13 +5,13 @@ import {Text} from 'react-native-elements';
 import {TextView, HeaderView, TextBoxView, OverlayView} from '../components';
 import Colors from '../../constants/Colors';
 
-const ContactUs = ({navigation: {goBack}}) => {
+const ContactUs = ({navigation: {goBack, openDrawer}}) => {
   const [modal, setModal] = useState(false);
 
   const setShow = (val: boolean) => setModal(val);
   return (
     <View style={styles.screen}>
-      <HeaderView>
+      <HeaderView openDrawer={openDrawer}>
         <View style={styles.header}>
           <Text h4 style={styles.title}>
             Contact Us

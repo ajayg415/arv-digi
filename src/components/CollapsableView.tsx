@@ -32,6 +32,7 @@ const CollapsableView = () => {
         return (
           <>
             <List.Accordion
+              key={faq.title}
               title={faq.title}
               style={styles.accordion}
               titleStyle={{color: 'white', fontWeight: 'bold', fontSize: 16}}>
