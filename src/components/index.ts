@@ -5,6 +5,7 @@ import SliderView from './SliderView';
 import PieChartView from './PieChartView';
 import TextBoxView from './TextBoxView';
 import OverlayView from './OverlayView';
+import CollapsableView from './CollapsableView';
 
 export {
   IconView,
@@ -14,4 +15,5 @@ export {
   PieChartView,
   TextBoxView,
   OverlayView,
+  CollapsableView,
 };
