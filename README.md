@@ -9,6 +9,8 @@ This is a offline app, doesn't require any internet connection to run.
 
 [![N|Solid](https://github.com/ajayg415/arv-digi/blob/main/builds/download.png)](https://github.com/ajayg415/arv-digi/blob/main/builds/app-release.apk)
 
+<a id="raw-url" href="https://github.com/ajayg415/arv-digi/blob/main/builds/app-release.apk">Download FILE</a>
+
 
 ## Running app in local
 - Clone the repo in your local by the below command
