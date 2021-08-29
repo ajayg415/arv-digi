@@ -4,7 +4,7 @@
 
 ## Installation
 
-Please download the apk file from build folder and install the apk in your local mobile.
+Please download the apk file from build folder `(Or click below android icon to download it)` and install the apk in your local mobile.
 This is a offline app, doesn't require any internet connection to run. 
 
 [![N|Solid](https://github.com/ajayg415/arv-digi/blob/main/builds/download.png)](https://github.com/ajayg415/arv-digi/blob/main/builds/app-release.apk)
